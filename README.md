@@ -12,18 +12,17 @@ class ex {
     public static void main(String args[])
     {
         Scanner in = new Scanner(System.in);
-        PrintWriter out = new PrintWriter(System.out,true);
         
         String s = in.next();
         int n = s.length();
-        HashSet<Character> set = new HashSet<>();
+        HashSet<Character> fset = new HashSet<>();
         ArrayList<String> list = new ArrayList<>();
         
         for(int i=0; i<n; i++)
-            set.add(s.charAt(i));
+            fset.add(s.charAt(i));
             
         String temp = "";
-        Iterator<Character> it = set.iterator();
+        Iterator<Character> it = fset.iterator();
         while(it.hasNext())
         {
             char c = it.next();
@@ -38,9 +37,7 @@ class ex {
         
         Collections.sort(list);
         System.out.println("Answer:-");
-        out.println(list.get(0));
-        
-        out.flush();
+        System.out.println(list.get(0));
         
         
     }
