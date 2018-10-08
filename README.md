@@ -15,17 +15,18 @@ class ex {
         
         String s = in.next();
         int n = s.length();
+        char a[] = new char[n];
         HashSet<Character> fset = new HashSet<>();
         ArrayList<String> list = new ArrayList<>();
         
         for(int i=0; i<n; i++)
-            fset.add(s.charAt(i));
+            a[i] = s.charAt(i);
             
         String temp = "";
-        Iterator<Character> it = fset.iterator();
-        while(it.hasNext())
+        int i = 0;
+        while(i!=n)
         {
-            char c = it.next();
+            char c = a[i];
             for(int i=0; i<n; i++)
             {
                 if(s.charAt(i)!=c)
