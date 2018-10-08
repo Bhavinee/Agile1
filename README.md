@@ -37,6 +37,7 @@ class ex {
         }
         
         Collections.sort(list);
+        System.out.println("Answer:-");
         out.println(list.get(0));
         
         out.flush();
